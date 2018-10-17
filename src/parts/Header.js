@@ -10,7 +10,7 @@ export default class Header extends Component {
 
   render() {
     return (
-      <div>
+    <div>
       <section id="identity">
         <div className="container">
           <div className="row">

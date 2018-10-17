@@ -1,3 +1,7 @@
+@import "./_globals.less";
+@import "./_colors.less";
+
+
 body {
   font-size: 14px;
   line-height:1.5;
@@ -75,42 +79,4 @@ aside ul#skills li {
 }
 aside ul#skills li .progress {
   margin-top:-1.25em;
-}
-
-.loader {
-  animation: loader-spin infinite 20s linear;
-  /* height: 80px; */
-}
-@keyframes loader-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
