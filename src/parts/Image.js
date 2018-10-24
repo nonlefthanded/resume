@@ -26,7 +26,7 @@ export default class Image extends Component {
   }
 
   showFullSize(image, data){
-    console.log(image);
+    // console.log(image);
     console.log(data);
     // var coverScreen = document.getElementById('coverage').style.display = "block";
     // console.log(coverScreen);
@@ -37,9 +37,17 @@ export default class Image extends Component {
     // and give it some content
     var newContent = document.createElement("img");
     newContent.src = image;
-    newContent.style.maxWidth = "100%";
-    newContent.style.height = "80%";
-    newContent.style.marginTop = "5%";
+    newContent.style.maxWidth = "95%";
+    newContent.style.maxHeight = "95%";
+    newContent.style.margin   = "auto";
+    // newContent.style.height = "80%";
+    // newContent.style.marginTop = "2%";
+    newContent.style.verticalAlign = "middle";
+    newDiv.setAttribute('title','Click to close.');
+
+    var newHelper = document.createElement("div");
+    newDiv.appendChild(newHelper);
+    newHelper.setAttribute("class", "helper");
 
     // add the text node to the newly created div
     newDiv.appendChild(newContent);

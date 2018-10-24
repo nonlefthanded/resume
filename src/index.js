@@ -12,5 +12,3 @@ ReactDOM.render(<Header />, document.getElementById('header'));
 ReactDOM.render(<MainContent />, document.getElementById('main'));
 ReactDOM.render(<Sidebar baseUrl='http://resume-data.nonlefthanded.com/wp-json/wp/v2' />, document.getElementById('aside'));
 ReactDOM.render(<Footer />, document.getElementById('footer'));
-// ReactDOM.render(<Coverage />, document.getElementById('coverage'));
-// registerServiceWorker();
