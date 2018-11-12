@@ -27,7 +27,7 @@ export default class Image extends Component {
 
   showFullSize(image, data){
     // console.log(image);
-    console.log(data);
+    // console.log(data);
     // var coverScreen = document.getElementById('coverage').style.display = "block";
     // console.log(coverScreen);
     // create a new div element

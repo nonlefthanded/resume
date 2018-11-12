@@ -1,6 +1,6 @@
 @import "./_globals.less";
 @import "./_colors.less";
-@import "./_sm.less";
+@import "./_sm.less?t=1";
 
 
 
@@ -21,20 +21,24 @@ section#identityInfo {
   padding-top:1em;
   position:relative;
   text-align:right;
+  height:5em;
+  line-height:1.25;
+  border-top:3px solid white;
   a {
-    margin-right:1em;
+
   }
 
   &.sticky{
     top:0px;
     z-index:99;
-    border-bottom:3px solid @brown;
+    box-shadow: 0px 10px 10px white;
 
     img {
-      width:3em;
-      top:-.75em;
+      width:4em;
+      top:-.667em;
       border-width: 2px;
       border-color: white;
+      padding:0px;
     }
 
 
@@ -43,12 +47,17 @@ section#identityInfo {
   img {
     transition: all 0.25s ease;
     position:absolute;
-    border:4px solid @green;
+    border: 1px solid @green;
+    padding:4px;
+    background:white;
     border-radius:50%;
-    width:250px;
-    top:-125px;
+    width:200px;
+    top:-100px;
     left:0px;
     z-index: 99999;
+
+
+
   }
 
 }
@@ -56,8 +65,7 @@ section#identityInfo {
 
 
 #intro {
-  margin:100px auto;
-
+  margin-top:2em;
   h1 {
     font-family: 'Rock Salt', cursive;
     font-family: 'Permanent Marker', cursive;

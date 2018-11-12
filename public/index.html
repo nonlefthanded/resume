@@ -29,13 +29,16 @@
         window.onscroll = function() {
           stickyTop()
         };
+        window.onresize = function() {
+          stickyTop()
+        };
         var header = document.getElementById("identityInfo");
         // Get the offset position of the navbar
         var sticky = header.offsetTop;
         // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
         function stickyTop() {
           var _width = document.getElementById("identityInfo").parentNode.clientWidth;
-          //console.log(_width);
+          console.log(_width);
           //return false;
           if (window.pageYOffset > sticky) {
             header.classList.add("position-fixed");

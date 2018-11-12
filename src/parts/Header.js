@@ -24,21 +24,30 @@ export default class Header extends Component {
       <section id="identityInfo">
       <div className="container">
         <div className="row">
-          <div className="col-lg-12">
-            <p id="" className="text-right-lg">
-              <img  src="/headshot.jpg"
-                    alt="CJ Stritzel | Headshot"
-                    className="img-fluid xs-center sm-center md-left lg-left xl-left" />
-              <b>CJ Stritzel</b> &nbsp;
-              Front End Developer &nbsp;
-              <a href="//nonlefthanded.com"><i className="fa fa-sitemap"></i> nonlefthanded.com</a>
-              <a href="mailto:nonlefthanded@gmail.com"><i className="fa fa-envelope"></i> nonlefthanded@gmail.com</a>
-              <a href="tel:5037579890"><i className="fa fa-phone"></i> 503 757 9890</a>
+          <div className="col-12 col-md-6 text-sm-center">
+            <img  src="/headshot.jpg"
+                  alt="CJ Stritzel | Headshot"
+                  className="img-fluid center center md-left lg-left xl-left" />
+          </div>
+          <div className="col-12 col-md-6 text-xl-right text-lg-right text-md-right text-sm-right text-center">
+            <p>
+            <big><b>CJ Stritzel</b></big> Front End Developer
+            <br />
+            <a
+              className=""
+              href="mailto:nonlefthanded@gmail.com">nonlefthanded@gmail.com
+            </a> | <a
+                    className=""
+                    href="tel:5037579890">503 757 9890
+                   </a>
             </p>
           </div>
         </div>
+
       </div>
+
       </section>
+
 
     </div>
     )

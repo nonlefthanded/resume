@@ -43,7 +43,7 @@ export default class Sidebar extends Component {
 
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     const Objectives = <p
       className="post__content"
       dangerouslySetInnerHTML={{__html: this.state.objectives.content.rendered}}>
@@ -81,7 +81,7 @@ export default class Sidebar extends Component {
         <h3>Objectives</h3>
         {Objectives}
         <hr />
-
+        
         <h3>Education</h3>
         {Education}
         <hr />

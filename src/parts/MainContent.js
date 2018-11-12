@@ -35,7 +35,8 @@ export default class MainContent extends Component {
     // const Companies = this.state;
     // console.log(Companies);
     const CompanyList = this.state.order.map((companyID,i) => {
-      return <Company key={i} data={this.state.companies[companyID]} baseUrl={this.state.baseUrl} />
+      console.log(i);
+      return <Company key={i} index={i} data={this.state.companies[companyID]} baseUrl={this.state.baseUrl} />
     });
 
     return (

@@ -7,11 +7,13 @@ export default class Company extends Component {
 
   constructor(props) {
     super(props);
+    // console.log(props);
     this.state = {
       error     : {},
       company   : this.props.data,
       meta      : {},
-      baseUrl   : this.props.baseUrl
+      baseUrl   : this.props.baseUrl,
+      index     : this.props.index
     };
   }
 
@@ -27,15 +29,32 @@ export default class Company extends Component {
     });
   }
 
+
+
   render() {
+    const supervisorContact = function(state){
+      console.log(state);
+      if (state.index == 0) return (
+        <span>
+        <h4>Supervisor / Contact</h4>
+        <p>
+          {state.meta.supervisor}
+          <br />
+          <a href={'mailto:' + state.meta.supervisor_email}>{state.meta.supervisor_email}</a>
+          , or <a href={'tel:' + state.meta.phone.replace(/[^0-9.]/g, '')}>{state.meta.phone}</a>
+        </p>
+        </span>
+      );
+      return false;
+    }
     // console.log(this.state);
     if (!this.state.meta.logo) return "loading..."
     return (
       <div key={this.state.company.id} className="row company">
-      <section className="col-lg-2">
+      <section className="col-sm-2 text-sm-center">
         <Image id={this.state.meta.logo} baseUrl={this.state.baseUrl} className="img-fluid companyImage" size="full" />
       </section>
-      <article className="col-lg-10">
+      <article className="col-sm-10">
         <h2 className="company-name">
           {this.state.company.title.rendered}
           <br />
@@ -67,15 +86,7 @@ export default class Company extends Component {
         </section>
 
         <hr />
-
-        <h4>Supervisor / Contact</h4>
-        <p>
-          {this.state.meta.supervisor}
-          <br />
-          <a href={'mailto:' + this.state.meta.supervisor_email}>{this.state.meta.supervisor_email}</a>
-          , or <a href={'tel:' + this.state.meta.phone.replace(/[^0-9.]/g, '')}>{this.state.meta.phone}</a>
-        </p>
-
+        {supervisorContact(this.state)}
       </article>
       </div>
     );

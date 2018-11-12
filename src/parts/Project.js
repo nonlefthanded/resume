@@ -31,10 +31,10 @@ export default class Project extends Component {
     // console.log(this.state);
     if (this.state.meta.screenshot === 0) return false;
     return <div key={this.props.id} className="row project">
-      <div className="col-md-2 col-sm-4 col-xs-6">
+      <div className="col-4 col-md-2">
         <Image baseUrl={this.props.baseUrl} id={this.state.meta.screenshot} className="project-image img-fluid zoom-in" size="thumbnail" />
       </div>
-      <div className="col-md-10 col-sm-8 col-xs-6">
+      <div className="col-8 col-md-10">
         <b><a href={this.state.meta.url} target="_blank">{this.state.project.title.rendered}</a></b>
         <div
           className="post__content"
